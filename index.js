@@ -1,20 +1,32 @@
 /*
   Opis:
-     Napišite funkciju pod nazivom repeater() koja uzima dva argumenta (string i broj) i vraća novi string gdje se ulazni string ponavlja toliko puta.
-   primjeri:
-     repeater("a", 5) bi trebao vratiti "aaaaa"
-     repeater("xyz", 3) bi trebao vratiti "xyzxyzxyz"
-
+     Napišite funkciju pod nazivom sumDigits koja prima jedan parametar koji je broj 
+     i koja kao rezultat vraća zbroj apsolutne vrijednosti svake decimalne znamenke broja.
+     Pretpostavimo da će svi brojevi na ulazu biti cjelobrojne vrijednosti.
+   
+     Primjeri:
+     sumDigits(10);    // Vraća 1
+     sumDigits(99);    // Vraća 18
+     sumDigits(-32);   // Vraća 5
 */
 
 //----------------RJEŠENJE ZADATAKA ------------
 
-function repeater(string, broj){
+function sumDigits(broj) {
+  suma = 0
+  while (broj !== 0) {
+    suma += Math.abs(broj % 10);
+    broj = parseInt(broj / 10);
+  }
+  return suma
+}
+
 
 
 
 
 
 //---------------------------------------------------
+
 // Function Export
-module.exports = repeater
+export default sumDigits

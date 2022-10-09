@@ -1,13 +1,13 @@
-const repeater = require('.')
+const sumDigits = require('.').default
 
 test('Test 1', () => {
-  expect(repeater('a', 5)).toBe('aaaaa')
+  expect(sumDigits(10)).toBe(1)
 })
 
 test('Test 2', () => {
-  expect(repeater('Na', 16)).toBe('NaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNa')
+  expect(sumDigits(99)).toBe(18)
 })
 
 test('Test 3', () => {
-  expect(repeater('Wub ', 6)).toBe('Wub Wub Wub Wub Wub Wub ')
+  expect(sumDigits(-32)).toBe(5)
 })
